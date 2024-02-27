@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload or Capture Picture with Description</title>
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 15px;
+              background-color: #f4f4f4;
+            }
+            .navbar {
+            overflow: hidden;
+            background-color: rgb(185,36,60);
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0px 0px 45px 10px rgb(255, 255, 255);
+            padding-left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+            
+            .container {
+              max-width: 600px;
+              margin: 20px auto;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            h1 {
+                width: 50%;
+              text-align: center;
+            }
+            
+            form {
+              margin-top: 20px;
+            }
+            
+            label {
+              display: block;
+              margin-bottom: 5px;
+            }
+            
+            input[type="file"] {
+              margin-bottom: 10px;
+            }
+            
+            textarea {
+              width: 50%;
+              height: auto;
+              resize: vertical;
+              margin-bottom: 10px;
+            }
+            
+            button {
+              padding: 10px 20px;
+              background-color: #b9243c;
+              color: #fff;
+              border: none;
+              border-radius: 3px;
+              cursor: pointer;
+              width: auto;
+            }
+            
+            button:hover {
+              background-color: #0056b3;
+            }
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+            }
+            img{
+                height: 50px;
+            }
+            #video {
+                width: 100%;
+                max-width: 400px;
+            }
+
+.containerhist {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#actualreport{
+   max-width: 800px;
+   padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#reportdiv{
+  max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+    background-color: rgb(185,36,60);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.report {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report p {
+    margin: 0;
+}
+ #logo {
+    /* Adjust logo styles for smaller screens */
+    width: 110px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin for spacing */
+    background-color: white;
+  }
+.report h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#seconddiv{
+  width: 50%;
+  display: flex;
+  margin: 20px;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+ background-color: rgb(255, 255, 255);
+ border-radius: 20px;
+}
+#senconthird{
+  width: 100%;
+  display: flex;
+  margin-top: 0%;
+  flex-direction: row;
+  align-items: center;
+  background-color: gainsboro;
+}
+#thirddiv{
+  width: 50%;
+  display: flex;
+margin: 20px;
+height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+   border-radius: 20px;
+}
+#reportsContainer{
+  height: 60vh;
+  overflow: scroll;
+}
+#textarea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#cameraPreview{
+ width: 320px;
+  height: 240px;
+}
+      #loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+ @media (max-width: 768px) {
+  #senconthird{
+  width: 100%;
+  display: flex;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  background-color: gainsboro;
+}
+ #video {
+                width: 50%;
+                max-width: 100px;
+            }
+ #senconthird{
+  width: 100%;
+ 
+}
+#thirddiv{
+  width: 90%;
+  height: auto;
+  
+} 
+#seconddiv{
+  width: 90%;
+  height: auto;
+}
+#cameraPreview{
+ width: 70%;
+  height: 200px;
+}
+ }
+
+
+
+            </style>
+        </head>
+        <body>
+<div id="loading-spinner" style="display: none;">
+            <img src="VAyR.gif" alt="Loading">
+</div>
+          <div class="navbar">
+ 
+              <h4 id = "title" >The Key to Home Healthcare !!&nbsp;&nbsp;&nbsp;</h1>
+              <button id = "logout-btn" class="btn-logout">Logout</button>
+      </div>
+
+
+
+
+  
+<div id = "senconthird">
+<div id = "seconddiv">
+
+      
+
+<input type="file" id="imageInput" accept="image/*" style="display: none;">
+<video id="cameraPreview" style="display: none;"></video>
+
+<div>
+  <input type="radio" id="inputOption" name="source" value="input">
+  <label for="inputOption">Input</label>
+
+  <input type="radio" id="cameraOption" name="source" value="camera">
+  <label for="cameraOption">Camera</label>
+</div>
+ <img id="capturedImage" style="display: none;">
+ <!-- <canvas id="webcamCanvas"></canvas> -->
+
+<button id="actionButton" style="display: none;">Upload Image</button>
+<button id="click" style="display: none;">snap</button>
+<p id="uploadedFileName" style="display: none;"></p>
+
+
+
+
+
+
+        
+        <p>Provide additional Information</p>
+        <div id = "textarea"> <textarea id="description" name="description" rows="4" cols="50" placeholder="describe what happened"></textarea><br>
+
+        <button id="upload-submit" style="display: none;">Submit</button></div>
+
+ 
+
+ 
+
+
+   
+</div>
+<div id = "thirddiv">
+   <div id = "reportdiv">Your Report</div>
+      <div id = "actualreport">
+        <p id = "report"></p>
+        </div>
+        <button id="history">My history</button>
+             <div id="reportsContainer" class="containerhist" style="display: none;"></div>
+        </div>
+</div>
+
+
+
+         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+  
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-functions.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    
+<script src="firebase.js"></script>
+        <script src="diagnostic.js"></script>
+
+    </body>
+</html>

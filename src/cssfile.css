@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+body {
+    /* background-image: url('logo2.png');
+    background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    color: rgb(185,36,60);
+    margin-right: 20px;
+    text-shadow: 1px 1px 1px rgb(20, 20, 20);
+    text-emphasis-color: inherit;
+    font-style: bolder;
+}
+
+.input-container {
+    padding: 8px;
+}
+
+.input {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: #0f0f0f;
+    text-align: center;
+    text-decoration: solid;
+    color: rgb(18, 19, 18);
+    font-size: medium;
+    font-weight: bolder;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    text-size-adjust: initial;
+}
+
+#GetOTP {
+    background-color: rgb(27, 27, 26);
+    padding: 8px;
+    border-radius: 15px;
+    border-color: blueviolet;
+    cursor: pointer;
+    box-shadow: 4px 5px;
+}
+
+#GetOTP:hover {
+    background-color: brown;
+}
+
+#Submit {
+    background-color: #770551;
+    padding: 8px;
+    margin:10px;
+    border-radius: 15px;
+    border-color: blueviolet;
+    cursor: pointer;
+    box-shadow: 4px 5px;
+}
+
+#Submit:hover {
+    background-color: brown;
+}
+
+#boundary {
+    max-width: fit-content;
+    border: 2px solid rgb(46, 3, 95);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 13px 13px 13px;
+    text-align: center;
+    overflow: auto;
+    background-color: white;
+    padding: 5%;
+}
+
+#contentposition {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: linear-gradient(to top right, rgb(185,36,60), white,rgb(185,36,60));
+    height: 100vh;
+}
