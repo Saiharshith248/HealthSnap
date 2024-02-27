@@ -99,6 +99,7 @@ exports.processImagecall = functions.https.onCall(async (data, context) => {
         }
         // Initialize Google Generative AI
             const genAI = new GoogleGenerativeAI('USE-API-KEY');
+            //enter your google API KEY
             const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
             // Generate content using the model
