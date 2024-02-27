@@ -98,7 +98,7 @@ exports.processImagecall = functions.https.onCall(async (data, context) => {
             throw new Error('Failed to download image');
         }
         // Initialize Google Generative AI
-            const genAI = new GoogleGenerativeAI('AIzaSyBwfwR21h0FtoJOkEASbpsb_-1izjMVJ2w');
+            const genAI = new GoogleGenerativeAI('USE-API-KEY');
             const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
             // Generate content using the model
